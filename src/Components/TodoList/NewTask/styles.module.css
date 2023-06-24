@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.form input {
+  flex: 1;
+  
+  border: 0.0625rem solid var(--gray-700);
+  border-radius: 0.5rem;
+
+  padding: 1rem;
+  background: var(--gray-500);
+
+  transition: border-color 0.1s;
+}
+
+.form input:focus, .form input:hover {
+  outline: 0;
+  border-color: var(--purple-700);
+}
+
+.form input.inputFilled {
+  border-color: var(--purple-700);
+}
+
+.form button[type='submit'] {
+  border-radius: 0.5rem;
+  background: var(--blue-700);
+  padding: 1rem;
+  margin-left: 0.5rem;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+
+  transition: background-color 0.1s;
+}
+
+.form button[type='submit']:hover {
+  background-color: var(--blue-500);
+}
+
+.form button[type='submit'] svg {
+  margin-left: 0.5rem;
+}

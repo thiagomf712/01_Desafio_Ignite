@@ -1,0 +1,37 @@
+.taskList {
+  margin-top: 4rem;
+}
+
+.taskList header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info > p {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.info > p.created {
+  color: var(--blue-500);
+}
+
+.info > p.ended {
+  color: var(--purple-500);
+}
+
+.info > span {
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
+  background: var(--gray-400);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--gray-200);
+}
