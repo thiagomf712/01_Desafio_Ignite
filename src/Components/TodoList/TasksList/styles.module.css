@@ -35,3 +35,32 @@
   font-size: 0.75rem;
   color: var(--gray-200);
 }
+
+.noTask {
+  padding: 4rem 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--gray-400);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.noTask img {
+  margin-bottom: 1rem;
+}
+
+.noTask p {
+  color: var(--gray-300);
+  text-align: center;
+}
+
+.noTask p b {
+  font-weight: 700;
+}
+
+.hide {
+  visibility: hidden;
+  max-height: 0;
+}

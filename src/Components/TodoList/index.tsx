@@ -10,10 +10,7 @@ export interface ITask {
 }
 
 export function TodoList() {
-  const [tasks, setTasks] = useState<ITask[]>([
-    { id: 1, description: 'Tarefa 1', done: false },
-    { id: 2, description: 'Tarefa 2', done: true },
-  ]);
+  const [tasks, setTasks] = useState<ITask[]>([]);
   const [newTaskId, setNewTaskId] = useState(3);
 
   function createTask(description: string) {

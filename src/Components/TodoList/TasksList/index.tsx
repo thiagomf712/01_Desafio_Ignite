@@ -1,5 +1,6 @@
 import { ITask } from '..';
 import { Task } from './Task';
+import clipboardIcon from '../../../assets/clipboard.svg';
 import styles from './styles.module.css';
 
 interface ITaskList {
@@ -19,6 +20,12 @@ export function TaskList({ tasks, onCompleteTask, onDeleteTask }: ITaskList) {
     return [created, done];
   }, [0, 0])
 
+  const taskDonesText = tasksCreated === 0 
+    ? String(tasksDone) 
+    : `${tasksDone} de ${tasksCreated}`;
+
+  const showNoTaskCreatedInfo = tasksCreated === 0;
+
   return (
     <div className={styles.taskList}>
       <header>
@@ -29,7 +36,7 @@ export function TaskList({ tasks, onCompleteTask, onDeleteTask }: ITaskList) {
 
         <div className={styles.info}>
           <p className={styles.ended}>Concluídas</p>
-          <span>{tasksDone} de {tasksCreated}</span>
+          <span>{taskDonesText}</span>
         </div>
       </header>
 
@@ -41,6 +48,14 @@ export function TaskList({ tasks, onCompleteTask, onDeleteTask }: ITaskList) {
           onDeleteTask={onDeleteTask}
         />
       ))}
+      
+      <div className={`${styles.noTask} ${!showNoTaskCreatedInfo && styles.hide}`}>
+        <img src={clipboardIcon} alt="" />
+
+        <p><b>Você ainda não tem tarefas cadastradas</b></p>
+
+        <p>Crie tarefas e organize seus itens a fazer</p>
+      </div>
     </div>
   )
 }
